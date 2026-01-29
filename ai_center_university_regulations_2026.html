@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 AI 중심대학 사업 - 규정 수정 필요사항</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            border-radius: 16px;
+            color: white;
+            box-shadow: 0 10px 40px rgba(30, 58, 95, 0.3);
+        }
+        
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        header .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        header .date {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .section-title .icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        
+        .icon-red { background: #fee2e2; }
+        .icon-yellow { background: #fef3c7; }
+        .icon-green { background: #d1fae5; }
+        .icon-blue { background: #dbeafe; }
+        
+        .item {
+            margin-bottom: 1.5rem;
+            padding: 1.25rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin-bottom: 0.75rem;
+        }
+        
+        .item p {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        
+        .badge-change { background: #fef3c7; color: #92400e; }
+        .badge-new { background: #d1fae5; color: #065f46; }
+        .badge-important { background: #fee2e2; color: #991b1b; }
+        
+        .compare-box {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .compare-box .old {
+            text-align: center;
+            padding: 0.5rem;
+            background: #fef2f2;
+            border-radius: 6px;
+            color: #991b1b;
+            font-size: 0.875rem;
+        }
+        
+        .compare-box .arrow {
+            font-size: 1.25rem;
+            color: #3b82f6;
+        }
+        
+        .compare-box .new {
+            text-align: center;
+            padding: 0.5rem;
+            background: #ecfdf5;
+            border-radius: 6px;
+            color: #065f46;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: #1e3a5f;
+        }
+        
+        tr:hover {
+            background: #f8fafc;
+        }
+        
+        .checklist {
+            list-style: none;
+        }
+        
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+        
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #cbd5e1;
+            border-radius: 4px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #fef3c7 0%, #fef3c7 100%);
+            padding: 0.125rem 0.25rem;
+            border-radius: 4px;
+        }
+        
+        .note {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #eff6ff;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+        }
+        
+        .note::before {
+            content: "💡 ";
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .section {
+                padding: 1.25rem;
+            }
+            
+            .compare-box {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            
+            .compare-box .arrow {
+                transform: rotate(90deg);
+            }
+            
+            header h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2026 AI 중심대학 사업</h1>
+            <div class="subtitle">위원회 필수 확인 - 규정 수정 필요사항</div>
+            <div class="date">설명회 일자: 2026.01.29 | 문서 작성: CHA University</div>
+        </header>
+
+        <!-- 필수 규정 수정 사항 -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon icon-red">🔴</span>
+                필수 규정 수정 사항
+            </h2>
+            
+            <div class="item">
+                <h3>1. 사업단장 자격 요건 강화</h3>
+                <span class="badge badge-important">필수</span>
+                <span class="badge badge-change">변경</span>
+                <p>교무위원급 <strong>당연직</strong> 선임 의무화</p>
+                <div class="compare-box">
+                    <div class="old">임명직/임시직 가능</div>
+                    <div class="arrow">→</div>
+                    <div class="new">당연직 필수</div>
+                </div>
+                <div class="note">
+                    선정 시 교무위원 자격 확보 필요. 이행확약서에 전환 시기 명시 + 총장 서명 필수
+                </div>
+            </div>
+
+            <div class="item">
+                <h3>2. 간접비 사용 의무화</h3>
+                <span class="badge badge-important">필수</span>
+                <span class="badge badge-change">변경</span>
+                <p>간접비 <strong>80% 이상</strong>을 AI 중심대학 사업에 사용</p>
+                <div class="compare-box">
+                    <div class="old">사용 권고</div>
+                    <div class="arrow">→</div>
+                    <div class="new">사용 의무</div>
+                </div>
+                <div class="note">
+                    행정지원 인력 4~12명 운영 필요. 지원 인력 및 운영비 용도
+                </div>
+            </div>
+
+            <div class="item">
+                <h3>3. 단계 평가 기간 변경</h3>
+                <span class="badge badge-change">변경</span>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>기존</th>
+                            <th>변경</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1단계</td>
+                            <td>4년</td>
+                            <td><strong>3년</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2단계</td>
+                            <td>2년</td>
+                            <td><strong>3년</strong></td>
+                        </tr>
+                        <tr>
+                            <td>3단계</td>
+                            <td>2년</td>
+                            <td>2년</td>
+                        </tr>
+                        <tr>
+                            <td>최대 지원</td>
+                            <td>8년</td>
+                            <td>8년</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="item">
+                <h3>4. AI 학과 신설 시 3년 이내 의무</h3>
+                <span class="badge badge-new">신규</span>
+                <p><strong>신설하는 경우:</strong> 1단계(3년) 이내 설치 의무</p>
+                <p><strong>기존 학과 개편:</strong> 3년 이후 순차 진행 가능 (자율)</p>
+            </div>
+
+            <div class="item">
+                <h3>5. 대학 현금 부담금</h3>
+                <span class="badge badge-important">필수</span>
+                <p>정부 지원 연구개발비의 <strong>10%</strong> 대학 현금 매칭 필수</p>
+                <div class="note">
+                    예시: 30억 지원 시 → 대학 현금 <strong>3억 원</strong> 필수 확보
+                </div>
+            </div>
+        </section>
+
+        <!-- 신청 자격 관련 -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon icon-yellow">🟡</span>
+                신청 자격 관련
+            </h2>
+            
+            <div class="item">
+                <h3>신청 제외 대상</h3>
+                <p>• AI 거점대학 <strong>9개교</strong> (지역거점 국립대)</p>
+                <p>• AI 단과대학 <strong>4개교</strong> (4대 과기원)</p>
+                <p>• 기존 AI/SW 중심대학 중 <span class="highlight">60점 미만</span> 또는 <span class="highlight">중단된 대학</span></p>
+                <div class="note">
+                    종료 후에도 신규 신청 불가 (평가 이력 영구 반영)
+                </div>
+            </div>
+
+            <div class="item">
+                <h3>본교/분교 신청</h3>
+                <p>• 본교 및 분교: 각각 <strong>별도 신청 가능</strong></p>
+                <p>• 캠퍼스 단위 신청: <strong>불가</strong> (분리된 분교만 가능)</p>
+            </div>
+        </section>
+
+        <!-- 운영 관련 변경사항 -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon icon-green">🟢</span>
+                운영 관련 변경사항
+            </h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>교양 AI 과목</strong></td>
+                        <td>최소 1과목 <strong>교양 필수</strong> 지정 (학칙 개정 필요)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>자대 대학원 인턴십</strong></td>
+                        <td>인정 가능 (학석사 연계 고려)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>연구계획서</strong></td>
+                        <td>150페이지 → <strong>70페이지</strong> (예산서 10p 포함)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>별첨 자료</strong></td>
+                        <td>자유 양식, 섹터 구분 필수</td>
+                    </tr>
+                    <tr>
+                        <td><strong>동시수행 과제 제한</strong></td>
+                        <td>3750 규정 <strong>적용 제외</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>참여율</strong></td>
+                        <td>책임자 30%, 참여교수 10% 이상</td>
+                    </tr>
+                    <tr>
+                        <td><strong>특화 산업</strong></td>
+                        <td>제한 없음 (전방위적, 지역 무관)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 평가 관련 -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon icon-blue">📋</span>
+                평가 기준
+            </h2>
+            
+            <div class="item">
+                <h3>선정 절차</h3>
+                <p>• 2026년 신규 선정: <strong>3개교</strong></p>
+                <p>• 서면 평가: <strong>3배수 이내</strong> 선발 (9개교) → 60점 미만 제외</p>
+                <p>• 최종 점수: 서면 30점 + 발표 70점 = 100점 (고득점 순 선정)</p>
+                <p>• 협약 시작: 2026년 7월 1일 기준 (변동 가능)</p>
+            </div>
+        </section>
+
+        <!-- 위원회 체크리스트 -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon icon-blue">✅</span>
+                위원회 체크리스트
+            </h2>
+            
+            <ul class="checklist">
+                <li>
+                    <span class="checkbox"></span>
+                    <span>사업단장 교무위원 <strong>당연직</strong> 전환 절차 확인</span>
+                </li>
+                <li>
+                    <span class="checkbox"></span>
+                    <span>간접비 80% 사용 규정 학교 규정에 반영</span>
+                </li>
+                <li>
+                    <span class="checkbox"></span>
+                    <span>AI 학과 신설 시 <strong>3년 로드맵</strong> 수립</span>
+                </li>
+                <li>
+                    <span class="checkbox"></span>
+                    <span>대학 현금 부담금 <strong>10%</strong> 예산 확보</span>
+                </li>
+                <li>
+                    <span class="checkbox"></span>
+                    <span>교양 AI 필수과목 지정 (학칙 개정 검토)</span>
+                </li>
+                <li>
+                    <span class="checkbox"></span>
+                    <span>교원 평가제도 개선 방안 마련 (평가 시 중점 검토)</span>
+                </li>
+                <li>
+                    <span class="checkbox"></span>
+                    <span>이행확약서 총장 서명 준비</span>
+                </li>
+                <li>
+                    <span class="checkbox"></span>
+                    <span>연구계획서 70페이지 내 작성 (별첨 섹터 구분)</span>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>본 문서는 2026.01.29 AI 중심대학 사업 설명회 내용을 기반으로 작성되었습니다.</p>
+            <p>문의: 정보통신기획평가원(IITP) AI 중심대학 담당</p>
+        </footer>
+    </div>
+</body>
+</html>
