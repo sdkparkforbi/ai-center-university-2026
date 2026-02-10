@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHA 의과학대학교 핵심 전략 — 참석자 1 발언 종합 정리</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --deep-blue: #132742;
+    --accent-gold: #c9a84c;
+    --accent-light: #e8d7a3;
+    --text-light: #e2e8f0;
+    --text-muted: #94a3b8;
+    --card-bg: rgba(19, 39, 66, 0.6);
+    --card-border: rgba(201, 168, 76, 0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.8;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .bg-pattern {
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(201,168,76,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 90%, rgba(19,39,66,0.8) 0%, transparent 60%);
+    pointer-events: none; z-index: 0;
+  }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
+
+  /* Header */
+  header { padding: 5rem 0 3rem; text-align: center; }
+  header::after { content: ''; display: block; width: 60px; height: 2px; background: var(--accent-gold); margin: 2rem auto 0; }
+
+  .badge {
+    display: inline-block; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--accent-gold); border: 1px solid var(--card-border);
+    padding: 0.4rem 1.2rem; border-radius: 2rem; margin-bottom: 1.5rem; animation: fadeDown 0.8s ease;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 0.5rem;
+    animation: fadeDown 0.8s ease 0.1s both;
+  }
+  h1 .gold { color: var(--accent-gold); }
+
+  .subtitle { font-size: 0.95rem; color: var(--text-muted); font-weight: 300; animation: fadeDown 0.8s ease 0.2s both; }
+
+  /* Vision */
+  .vision {
+    background: linear-gradient(135deg, var(--card-bg), rgba(201,168,76,0.05));
+    border: 1px solid var(--card-border); border-radius: 16px; padding: 2.5rem;
+    margin: 2rem 0 3rem; text-align: center; position: relative; overflow: hidden;
+    animation: fadeUp 0.8s ease 0.3s both;
+  }
+  .vision::before {
+    content: '"'; position: absolute; top: -20px; left: 30px;
+    font-family: 'Playfair Display', serif; font-size: 8rem; color: rgba(201,168,76,0.08); pointer-events: none;
+  }
+  .vision-keyword { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+  .vision-sub { font-size: 1.1rem; color: #fff; font-weight: 500; margin-bottom: 0.8rem; }
+  .vision p { color: var(--text-muted); font-size: 0.9rem; max-width: 640px; margin: 0 auto; }
+
+  /* Section Headers */
+  .section-header {
+    font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent-gold); margin: 3rem 0 1.5rem; padding-left: 0.5rem;
+    border-left: 2px solid var(--accent-gold);
+  }
+
+  /* Strategy Cards */
+  .strategy-card {
+    background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px;
+    padding: 2rem 2.2rem; margin-bottom: 1.2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease; animation: fadeUp 0.6s ease both;
+  }
+  .strategy-card:hover { transform: translateY(-2px); border-color: rgba(201,168,76,0.35); }
+
+  .card-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+
+  .card-num {
+    flex-shrink: 0; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+    background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25); border-radius: 10px;
+    font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--accent-gold);
+  }
+
+  .card-title { font-size: 1.15rem; font-weight: 700; color: #fff; line-height: 1.4; }
+  .card-body { padding-left: 3rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.9; }
+  .card-body p { margin-bottom: 0.6rem; }
+  .highlight { color: var(--accent-light); font-weight: 500; }
+
+  .sub-items { margin-top: 0.8rem; }
+  .sub-item {
+    display: flex; gap: 0.6rem; align-items: flex-start; margin-bottom: 0.4rem;
+    font-size: 0.85rem; color: var(--text-muted);
+  }
+  .sub-dot {
+    flex-shrink: 0; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--accent-gold); margin-top: 0.55rem; opacity: 0.6;
+  }
+
+  /* Takeaway */
+  .takeaway {
+    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02));
+    border: 1px solid rgba(201,168,76,0.2); border-radius: 14px;
+    padding: 2rem 2.2rem; margin: 3rem 0; animation: fadeUp 0.6s ease both;
+  }
+  .takeaway h3 { font-size: 0.95rem; font-weight: 700; color: var(--accent-gold); margin-bottom: 0.8rem; }
+  .takeaway p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.9; }
+
+  footer { text-align: center; padding: 3rem 0 4rem; color: var(--text-muted); font-size: 0.75rem; opacity: 0.5; }
+
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 640px) {
+    .container { padding: 0 1.2rem; }
+    header { padding: 3rem 0 2rem; }
+    .vision { padding: 1.8rem 1.5rem; }
+    .strategy-card { padding: 1.5rem; }
+    .card-body { padding-left: 0; margin-top: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="bg-pattern"></div>
+
+<div class="container">
+  <header>
+    <div class="badge">2026.02.10 전략 회의 · 참석자 1 발언 종합 정리</div>
+    <h1>CHA 의과학대학교<br><span class="gold">핵심 추진 전략</span></h1>
+    <p class="subtitle">중장기 발전 전략 2035 · AI 중심 대학 전환 · RISE 사업 연계</p>
+  </header>
+
+  <!-- 비전 -->
+  <div class="vision">
+    <div class="vision-keyword">"Visible the Invisible"</div>
+    <div class="vision-sub">AI First Medical Campus</div>
+    <p>교수진의 보이지 않는 역량을 세계에 드러내어 대학 랭킹을 높이고, AI가 차 의과학대학교의 심장이 되어 체제 자체가 AI 중심으로 전환됨을 선언한다. 활용을 넘어, 뼛속까지 차바이오텍과 함께 AI로 간다.</p>
+  </div>
+
+  <!-- 1. 전략적 파트너십 -->
+  <h2 class="section-header">전략적 산업 파트너십</h2>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">1</div>
+      <div class="card-title">카카오 헬스케어 — 의료 데이터 표준화의 핵심 아군</div>
+    </div>
+    <div class="card-body">
+      <p>카카오 헬스케어는 <span class="highlight">의료 데이터 표준화·보안 기술</span>을 보유하고, 보건복지부 한국형 메이오 클리닉 사업에 참여 중인 핵심 플레이어다. 황희 대표(이지케어텍 부사장 출신)가 의료 데이터 표준화를 주도하고 있으며, 노보 노디스크와 MOU도 체결했다.</p>
+      <div class="sub-items">
+        <div class="sub-item"><div class="sub-dot"></div><span><span class="highlight">페더레이티드 러닝</span> — 병원 데이터를 다루는 연합학습 기술의 도메인을 카카오 헬스케어가 보유</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span><span class="highlight">AI 샌드박스</span> — 민감한 의료 데이터의 규제·지원을 위한 AI 샌드박스 조직을 대학 내에 구축 필요</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>3년간 800억 적자이지만, 의료 데이터 독점적 위치 확보 중 — "영향력 있는 아군"</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">2</div>
+      <div class="card-title">LG CNS — 한국형 AI와 계약학과 연계</div>
+    </div>
+    <div class="card-body">
+      <p>차바이오텍이 <span class="highlight">LG CNS로부터 100억 투자</span>를 유치했다. LG CNS가 주도하는 한국형 AI(엑사원)를 활용하여 AI 실습용 토큰을 확보하고, 계약학과·학습 연계 과정을 통해 협력할 수 있다.</p>
+      <div class="sub-items">
+        <div class="sub-item"><div class="sub-dot"></div><span>LG는 "AI 인재를 대학에 맡길 수 없다"며 세계 최초 AI 대학원 설립 — <span class="highlight">해당 AI 대학원과 직접 협력</span> 가능</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>B2B 중심(LG 계열사)이지만, 의료 데이터 영역에서 카카오 헬스케어와의 시너지 창출 가능</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>"아무도 이 생각을 안 할 것" — 허들이 높지만 차대는 판이 깔려 있다</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">3</div>
+      <div class="card-title">한화생명·손해보험 — 보험 데이터와 대규모 자금</div>
+    </div>
+    <div class="card-body">
+      <p><span class="highlight">한화생명 700억 + 하나손해보험 300억, 총 1,000억 유상증자</span>가 이루어졌다. 의료 데이터로 수익을 만들어내는 핵심 영역이 보험이며, 실손보험 자동 청구 시스템 등과 연계되어 있다. 이 모든 것의 중심에 차바이오 그룹이 있다.</p>
+    </div>
+  </div>
+
+  <!-- 2. 인센티브 & 조직 혁신 -->
+  <h2 class="section-header">인센티브 & 조직 혁신</h2>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">4</div>
+      <div class="card-title">주식(지분) 인센티브 — 진심을 보여주는 파격적 보상</div>
+    </div>
+    <div class="card-body">
+      <p>계약학과를 카카오 헬스케어와 운영할 경우, 차대에 들어오는 학생·교직원·교수에게 <span class="highlight">비상장 주식을 저가에 매입할 수 있는 권리</span>를 부여하는 방안을 제안한다. 예를 들어 차바이오텍 주식 1주(2만 원)라도 부여하여 주주가 되게 한다.</p>
+      <div class="sub-items">
+        <div class="sub-item"><div class="sub-dot"></div><span>"어떻게 해야 더 진심으로 느껴질 수 있을까, 이 대학이"</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>스타트업 육성 시에도 <span class="highlight">마일리지 + 주식 연계</span>로 의미 있는 인센티브 문화 조성</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>오가노이드 사이언스 같은 성과가 터지면 선순환 — 교수들이 열심히 연구하고 서로 돕는 문화</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">5</div>
+      <div class="card-title">CAIO(Chief AI Officer) 직위 신설</div>
+    </div>
+    <div class="card-body">
+      <p>대학의 AI 전환을 지속 가능하게 하려면 <span class="highlight">CAIO가 전 교육과정·전 행정에 AI 도입을 총괄</span>하는 핵심 중추적 역할을 해야 한다. 10년간 컨트롤 타워가 없어 데이터·AI 전환이 지연되었던 경험에서, 이번에는 명시적 조직 구조를 갖추는 것이 필수다.</p>
+    </div>
+  </div>
+
+  <!-- 3. 교육과정 혁신 -->
+  <h2 class="section-header">교육과정 혁신</h2>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">6</div>
+      <div class="card-title">AI 임베디드 커리큘럼 — 전공 학점 30% 이상 AI화</div>
+    </div>
+    <div class="card-body">
+      <p><span class="highlight">"AI Embedded Curriculum"</span>으로 AI가 교과과정에 완전히 내재화되어야 한다. 차대를 졸업하면 무조건 AI 의료 전문가가 되는 구조를 만들기 위해, 전공 학점의 30% 이상을 AI 교과목으로 편성할 것을 제안한다.</p>
+      <div class="sub-items">
+        <div class="sub-item"><div class="sub-dot"></div><span>2026년 분야별 AI 교과목 개발 → 2027년 신입생 AI 교육 의무화 (신규 선정 대학 가이드라인)</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span><span class="highlight">AI 융합 브리지 교과목</span> — 기존 전공의 AI를 통한 확장, 선택권 없는 의무화</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">7</div>
+      <div class="card-title">RBL·HBL — 차대만의 교육 방법론</div>
+    </div>
+    <div class="card-body">
+      <p>기존 PBL(Project-Based Learning)을 넘어, 차대 고유의 방법론으로 <span class="highlight">RBL(Research-Based Learning)</span>과 <span class="highlight">HBL(Hospital-Based Learning)</span>을 제시한다. 바이오 분야를 위한 BBL도 고려할 수 있다. 단순 방법론이 아니라, 데이터를 어떻게 가져갈 것인가의 구체적 로드맵을 제시해야 한다.</p>
+    </div>
+  </div>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">8</div>
+      <div class="card-title">산업체 교원 활용 & Faculty AX Training</div>
+    </div>
+    <div class="card-body">
+      <p>전 교원 AI 역량 강화를 위한 <span class="highlight">Faculty AX Training</span>을 도입하고, 산업체에 있는 교원을 적극 활용하는 것이 핵심이다. 기존 교원에 대한 인센티브와 함께, 산업체 전문가의 교육 참여를 제도화한다.</p>
+    </div>
+  </div>
+
+  <!-- 4. 벤치마킹 & 글로벌 -->
+  <h2 class="section-header">벤치마킹 모델 & 글로벌 전략</h2>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">9</div>
+      <div class="card-title">메이오 클리닉 모델 — 병원에서 대학으로의 확장</div>
+    </div>
+    <div class="card-body">
+      <p>메이오 클리닉은 병원으로 시작하여 7년 연속 세계 1위를 달성하고, 의전원과 의과학 전문 대학원을 갖춘 모델이다. <span class="highlight">차 병원 그룹과 구조가 매우 유사</span>하며, 보건복지부의 "한국형 메이오 클리닉" 사업에도 카카오 헬스케어가 참여 중이다.</p>
+      <div class="sub-items">
+        <div class="sub-item"><div class="sub-dot"></div><span><span class="highlight">오픈 에비던스</span>(의료 특화 LLM) — 하버드 박사 2명이 창업, 16조 밸류, 구글·메이오 클리닉이 투자한 모델 참고</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>의료 AI 표준화가 핵심 키워드 — "뾰족하게 나아가야 한다"</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">10</div>
+      <div class="card-title">ITU-WHO 의료용 AI 표준화 포럼 유치</div>
+    </div>
+    <div class="card-body">
+      <p>국제전기통신연합(ITU)이 WHO와 함께 <span class="highlight">의료용 AI 표준화 포럼</span>을 운영 중이다. 현재 카이스트가 ITU 아카데미에서 활동하고 있으며, 차바이오 그룹 이름으로 해당 포럼을 유치하면 카카오 헬스케어도 적극 호응할 것이다.</p>
+    </div>
+  </div>
+
+  <!-- 5. 창업 & 펀딩 -->
+  <h2 class="section-header">창업 생태계 & 펀딩</h2>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">11</div>
+      <div class="card-title">CVC 연계 & ESG 자금 유치</div>
+    </div>
+    <div class="card-body">
+      <p>차바이오 그룹의 CVC(콜리스 인베스트먼트)와 핵심적으로 협의하여, 산학 프로젝트 결과물이 실제 창업으로 이어지게 해야 한다. <span class="highlight">ESG/CSR 자금</span>(고용노동부, 하나은행 등)을 당기면 당위성만 좋으면 시드 투자가 가능하다.</p>
+      <div class="sub-items">
+        <div class="sub-item"><div class="sub-dot"></div><span>중기부 창업 중심 혁신파크 형태와 연계 — 교육 → IR → 시드 머니의 선순환</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>판교 CIC(2026년 2분기 입주)와 스타트업 연계성 확보</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">12</div>
+      <div class="card-title">언더독스 — 교육·스타트업 지원 파트너</div>
+    </div>
+    <div class="card-body">
+      <p>언더독스는 고용노동부·하나은행 ESG 자금으로 급성장한 교육·창업 지원 기업으로, 현재 <span class="highlight">상장을 준비 중</span>이다. 이재명 정부의 스타트업 살리기 지원 예산을 주관할 가능성이 높으며, 로컬 크리에이터·AI 기반 사업·재직자 교육 등을 연계할 수 있다.</p>
+    </div>
+  </div>
+
+  <!-- 6. 패스트트랙 -->
+  <h2 class="section-header">패스트트랙 실행 전략</h2>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">13</div>
+      <div class="card-title">명절 직후 IR & AI 중심 대학 선언</div>
+    </div>
+    <div class="card-body">
+      <p>"하겠습니다가 아니라, 당장 명절 끝나고 작업해서 <span class="highlight">3월 초에 IR을 하고 뉴스를 내보내야</span> 한다." LG CNS·카카오 헬스케어와 손잡고, "차 의과학대학교가 AI 중심 대학으로 전환한다"는 <span class="highlight">선언적 워딩</span>을 발표하여 기업들과의 의지를 대외에 보여줘야 한다.</p>
+      <div class="sub-items">
+        <div class="sub-item"><div class="sub-dot"></div><span>차 의과학대학교(송강재단)와 차바이오텍이 함께하는 모습을 보여주는 것이 핵심</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>의향서(LOI)라도 확보하면 제안서의 강력한 근거가 된다</span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>법령 변화(AI 기본법, 소프트웨어 중심 대학법) 시점에 맞춘 전략적 타이밍</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strategy-card">
+    <div class="card-header">
+      <div class="card-num">14</div>
+      <div class="card-title">리더십의 결단 — 콘크리트한 구조로 소장님을 만나야</div>
+    </div>
+    <div class="card-body">
+      <p>추진력을 얻으려면 <span class="highlight">가능성이 아닌 콘크리트한 구조</span>를 가지고 리더십을 설득해야 한다. 기존 규정(첨단산업 사업 시 정비된 것)을 기반으로 효율적으로 규정을 개정하되, 시기를 놓쳐서는 안 된다. 모든 그림을 좋게 그릴 수 있는 배경은 이미 갖춰져 있다.</p>
+      <div class="sub-items">
+        <div class="sub-item"><div class="sub-dot"></div><span>70페이지 보고서의 <span class="highlight">앞단 비전·방향 그림이 가장 중요</span></span></div>
+        <div class="sub-item"><div class="sub-dot"></div><span>도식화·디자인 작업은 시간이 많이 걸리므로 조기 착수 필수</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 핵심 메시지 -->
+  <div class="takeaway">
+    <h3>참석자 1의 핵심 메시지</h3>
+    <p>차 의과학대학교는 차바이오 그룹의 글로벌 네트워크(7개국, 101개 자회사), 카카오 헬스케어·LG CNS와의 자본 연계, 한화의 대규모 투자 등 <span class="highlight">"그림을 좋게 그릴 수 있는 배경이 이미 다 갖춰져 있다."</span> 이 판을 활용하여 AI 중심 대학으로의 전환을 선언하고, CAIO 조직·주식 인센티브·임베디드 커리큘럼으로 체제를 구조적으로 바꾸며, 의료 AI 표준화라는 뾰족한 도메인에서 글로벌 리더십을 확보하는 것이 핵심이다. "시작이라도 해봐야지 안 될 거라고 발도 못 떼는 건 아니다."</p>
+  </div>
+
+  <footer>
+    CHA University of Medicine and Science · 2026.02.10 전략회의 (46분+9분) · 참석자 1 발언 종합 정리
+  </footer>
+</div>
+</body>
+</html>

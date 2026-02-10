@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>차의과학대학교 AI중심대학 비전</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #ffffff;
+            width: 800px;
+            padding: 30px;
+        }
+        
+        .container {
+            width: 100%;
+        }
+        
+        /* 헤더 */
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .university-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1E3A5F;
+            margin-bottom: 12px;
+        }
+        
+        .slogan-box {
+            display: inline-block;
+            background: linear-gradient(135deg, #E8F4F8 0%, #D4EBF2 100%);
+            border: 2px solid #2E86AB;
+            border-radius: 12px;
+            padding: 12px 30px;
+        }
+        
+        .slogan {
+            font-size: 22px;
+            font-weight: 900;
+            color: #1E3A5F;
+        }
+        
+        /* 섹션 제목 */
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1E3A5F;
+            margin: 20px 0 12px 0;
+            padding-left: 5px;
+        }
+        
+        /* 비전 박스 */
+        .vision-box {
+            background: linear-gradient(135deg, #F8FBFD 0%, #EEF6F9 100%);
+            border: 1px solid #B8D4E3;
+            border-radius: 10px;
+            padding: 18px 20px;
+        }
+        
+        .vision-item {
+            font-size: 12px;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.6;
+            display: flex;
+        }
+        
+        .vision-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .vision-bullet {
+            color: #2E86AB;
+            font-weight: 700;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        
+        .highlight {
+            color: #1E3A5F;
+            font-weight: 700;
+        }
+        
+        /* 핵심목표 그리드 */
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        
+        .goal-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .goal-header {
+            background: #2E86AB;
+            color: white;
+            text-align: center;
+            padding: 10px 8px;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        
+        .goal-content {
+            padding: 12px 10px;
+            font-size: 10px;
+            line-height: 1.6;
+            color: #444;
+            min-height: 140px;
+        }
+        
+        .goal-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .goal-content li {
+            margin-bottom: 6px;
+            padding-left: 12px;
+            position: relative;
+        }
+        
+        .goal-content li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2E86AB;
+            font-weight: bold;
+        }
+        
+        /* 카드 색상 */
+        .card-1 .goal-content { background: #E8F4F8; }
+        .card-2 .goal-content { background: #FFF8E7; }
+        .card-3 .goal-content { background: #E8F5E9; }
+        .card-4 .goal-content { background: #FFF0F5; }
+        
+        /* 차별화 강점 */
+        .diff-title {
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: #1E3A5F;
+            margin: 20px 0 10px 0;
+        }
+        
+        .diff-box {
+            background: #F8F9FA;
+            border: 2px solid #1E3A5F;
+            border-radius: 10px;
+            padding: 15px 20px;
+        }
+        
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px 20px;
+        }
+        
+        .diff-item {
+            font-size: 11px;
+            color: #333;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .diff-icon {
+            margin-right: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <div class="header">
+            <div class="university-name">차의과학대학교 AI중심대학</div>
+            <div class="slogan-box">
+                <div class="slogan">"생명의 모든 순간을 바꿀 AI 인재를 키우다"</div>
+            </div>
+        </div>
+        
+        <!-- 비전 -->
+        <div class="section-title">□ 비전</div>
+        <div class="vision-box">
+            <div class="vision-item">
+                <span class="vision-bullet">○</span>
+                <span>난임·생식에서 치료·재활·장수까지, <span class="highlight">생명 전 주기를 혁신하는 Bio Healthcare AI 인재</span> 양성</span>
+            </div>
+            <div class="vision-item">
+                <span class="vision-bullet">○</span>
+                <span>학부생 전원에게 <span class="highlight">AI + 바이오헬스케어 + 비즈니스 3융합 역량</span>을 갖춘 실무형 인재 교육</span>
+            </div>
+            <div class="vision-item">
+                <span class="vision-bullet">○</span>
+                <span>의전원·대학원·차병원바이오그룹(병원·기업·연구소)을 <span class="highlight">학부 AI 교육 최적 환경</span>으로 활용, <span class="highlight">Bio Healthcare AI 교육 허브</span> 구축</span>
+            </div>
+        </div>
+        
+        <!-- 핵심목표 -->
+        <div class="section-title">□ 핵심목표</div>
+        <div class="goals-grid">
+            <div class="goal-card card-1">
+                <div class="goal-header">교육혁신 및<br>제도개선</div>
+                <div class="goal-content">
+                    <ul>
+                        <li>전 학과 학부생 AI 융합 교육체계 구축</li>
+                        <li>의전원·대학원·차병원바이오그룹을 학부 AI 교육 인프라로 활용</li>
+                        <li>학·석사 통합·연계과정 활성화</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="goal-card card-2">
+                <div class="goal-header">AI 교육과정<br>운영</div>
+                <div class="goal-content">
+                    <ul>
+                        <li>AI+바이오헬스케어+비즈니스 3융합 교육과정 운영</li>
+                        <li>AI전공 심화교육 강화</li>
+                        <li>전교생 AI기초 의무화</li>
+                        <li>7개국 96센터 임상 현장 연계 실무교육</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="goal-card card-3">
+                <div class="goal-header">특화산업 AX전환<br>및 AI창업</div>
+                <div class="goal-content">
+                    <ul>
+                        <li>바이오헬스케어 특화 AX전환 교육</li>
+                        <li>임상 빅데이터·세포 라이브러리 기반 학부생 PBL</li>
+                        <li>난임·생식의학 AI 특화과정</li>
+                        <li>AI창업 교육 및 예비창업 지원</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="goal-card card-4">
+                <div class="goal-header">AI 가치확산</div>
+                <div class="goal-content">
+                    <ul>
+                        <li>Bio Healthcare AI 교육 성과 전국 대학 공유·확산</li>
+                        <li>지역사회 맞춤형 AI 교육 프로그램</li>
+                        <li>글로벌 네트워크 기반 학부생 해외 교류 확대</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 차별화 강점 -->
+        <div class="diff-title">▼ 차별화 강점 ▼</div>
+        <div class="diff-box">
+            <div class="diff-grid">
+                <div class="diff-item">
+                    <span class="diff-icon">🏥</span>
+                    <span>국내 유일 <b>산·학·연·병 통합 인프라</b> (의전원·대학원·병원·기업·연구소)</span>
+                </div>
+                <div class="diff-item">
+                    <span class="diff-icon">🌍</span>
+                    <span><b>7개국 96센터</b> 차병원바이오그룹 글로벌 네트워크</span>
+                </div>
+                <div class="diff-item">
+                    <span class="diff-icon">🧬</span>
+                    <span><b>난임·생식의학 AI 세계적 경쟁력</b> (세포 라이브러리, 임상 빅데이터)</span>
+                </div>
+                <div class="diff-item">
+                    <span class="diff-icon">💼</span>
+                    <span>바이오헬스케어 특화 <b>AI + 비즈니스 융합</b> 인재 양성</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
