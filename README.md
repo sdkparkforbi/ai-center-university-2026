@@ -9,6 +9,7 @@
 | `index.html` | 메인 포털 (문서 목차) |
 | `cha_ai_vision.html` | AI 중심 대학 비전 · 핵심목표 · 차별화 강점 |
 | `cha_strategy.html` | 14대 핵심 추진 전략 종합 (2026.02.10 회의 기반) |
+| `regulations_2026.html` | 규정 수정 필요사항 · 위원회 체크리스트 (2026.01.29 설명회 기반) |
 
 ## 🚀 GitHub Pages 배포 방법
 

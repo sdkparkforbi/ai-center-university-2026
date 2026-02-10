@@ -8,9 +8,7 @@
 <style>
   :root {
     --navy: #0a1628;
-    --deep-blue: #132742;
     --accent-gold: #c9a84c;
-    --accent-light: #e8d7a3;
     --text-light: #e2e8f0;
     --text-muted: #94a3b8;
     --card-bg: rgba(19, 39, 66, 0.6);
@@ -36,151 +34,87 @@
     pointer-events: none; z-index: 0;
   }
 
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 1;
-  }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
 
-  header {
-    padding: 6rem 0 2rem;
-    text-align: center;
-  }
+  header { padding: 6rem 0 2rem; text-align: center; }
 
   .logo {
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--accent-gold);
-    margin-bottom: 1.5rem;
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--accent-gold); margin-bottom: 1.5rem;
     animation: fadeDown 0.8s ease;
   }
 
   h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 900;
-    color: #fff;
-    line-height: 1.3;
-    margin-bottom: 0.8rem;
+    font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 0.8rem;
     animation: fadeDown 0.8s ease 0.1s both;
   }
 
   h1 .gold { color: var(--accent-gold); }
 
   .subtitle {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    font-weight: 300;
-    margin-bottom: 1rem;
-    animation: fadeDown 0.8s ease 0.2s both;
+    font-size: 0.95rem; color: var(--text-muted); font-weight: 300;
+    margin-bottom: 1rem; animation: fadeDown 0.8s ease 0.2s both;
   }
 
   .divider {
-    width: 60px;
-    height: 2px;
-    background: var(--accent-gold);
-    margin: 2rem auto 3rem;
-    animation: fadeDown 0.8s ease 0.3s both;
+    width: 60px; height: 2px; background: var(--accent-gold);
+    margin: 2rem auto 3rem; animation: fadeDown 0.8s ease 0.3s both;
   }
 
-  /* Document Cards */
   .doc-list { margin: 0 0 4rem; }
 
   .doc-card {
-    display: block;
-    text-decoration: none;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 14px;
-    padding: 2rem 2.2rem;
-    margin-bottom: 1.2rem;
+    display: block; text-decoration: none;
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    border-radius: 14px; padding: 2rem 2.2rem; margin-bottom: 1.2rem;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeUp 0.6s ease both;
-    position: relative;
-    overflow: hidden;
+    animation: fadeUp 0.6s ease both; position: relative; overflow: hidden;
   }
 
   .doc-card::after {
-    content: '→';
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-    color: var(--accent-gold);
-    opacity: 0;
+    content: '→'; position: absolute; right: 2rem; top: 50%; transform: translateY(-50%);
+    font-size: 1.2rem; color: var(--accent-gold); opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .doc-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(201,168,76,0.4);
+    transform: translateY(-3px); border-color: rgba(201,168,76,0.4);
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   }
 
-  .doc-card:hover::after {
-    opacity: 1;
-    transform: translateY(-50%) translateX(4px);
-  }
+  .doc-card:hover::after { opacity: 1; transform: translateY(-50%) translateX(4px); }
 
   .doc-card:nth-child(1) { animation-delay: 0.1s; }
   .doc-card:nth-child(2) { animation-delay: 0.2s; }
   .doc-card:nth-child(3) { animation-delay: 0.3s; }
 
   .doc-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--accent-gold);
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif; font-size: 0.75rem; font-weight: 700;
+    color: var(--accent-gold); letter-spacing: 0.1em; margin-bottom: 0.5rem;
   }
 
   .doc-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 0.4rem;
-    line-height: 1.4;
-    padding-right: 2rem;
+    font-size: 1.15rem; font-weight: 700; color: #fff;
+    margin-bottom: 0.4rem; line-height: 1.4; padding-right: 2rem;
   }
 
   .doc-desc {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    padding-right: 2rem;
+    font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-right: 2rem;
   }
 
-  .doc-meta {
-    margin-top: 0.8rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+  .doc-meta { margin-top: 0.8rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
   .meta-tag {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    color: var(--accent-gold);
-    background: rgba(201,168,76,0.08);
+    font-size: 0.65rem; font-weight: 500; letter-spacing: 0.05em;
+    color: var(--accent-gold); background: rgba(201,168,76,0.08);
     border: 1px solid rgba(201,168,76,0.15);
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
+    padding: 0.2rem 0.6rem; border-radius: 4px;
   }
 
-  /* Footer */
   footer {
-    text-align: center;
-    padding: 2rem 0 4rem;
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    opacity: 0.4;
+    text-align: center; padding: 2rem 0 4rem;
+    color: var(--text-muted); font-size: 0.75rem; opacity: 0.4;
   }
 
   @keyframes fadeDown {
@@ -216,11 +150,12 @@
     <a href="cha_ai_vision.html" class="doc-card">
       <div class="doc-num">DOCUMENT 01</div>
       <div class="doc-title">AI 중심 대학 비전</div>
-      <div class="doc-desc">"생명의 모든 순간을 바꿀 AI 인재를 키우다" — 비전, 핵심목표, 차별화 강점 개요</div>
+      <div class="doc-desc">"생명의 모든 순간을 바꿀 AI 인재를 키우다" — 비전, 핵심목표 4대 영역, 차별화 강점</div>
       <div class="doc-meta">
         <span class="meta-tag">비전</span>
         <span class="meta-tag">교육혁신</span>
         <span class="meta-tag">AX전환</span>
+        <span class="meta-tag">가치확산</span>
       </div>
     </a>
 
@@ -233,6 +168,18 @@
         <span class="meta-tag">인센티브</span>
         <span class="meta-tag">패스트트랙</span>
         <span class="meta-tag">2026.02.10</span>
+      </div>
+    </a>
+
+    <a href="regulations_2026.html" class="doc-card">
+      <div class="doc-num">DOCUMENT 03</div>
+      <div class="doc-title">규정 수정 필요사항</div>
+      <div class="doc-desc">사업단장 당연직 전환, 간접비 80% 의무, 단계 평가 변경, 현금 부담금 10% 등 위원회 체크리스트</div>
+      <div class="doc-meta">
+        <span class="meta-tag">필수규정</span>
+        <span class="meta-tag">신청자격</span>
+        <span class="meta-tag">평가기준</span>
+        <span class="meta-tag">2026.01.29</span>
       </div>
     </a>
   </div>
